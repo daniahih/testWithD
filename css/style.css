@@ -1,0 +1,15 @@
+/* What happens if there are 2 style applied to the same html element? What is they contradict each other? Try it! */
+/* , the one that appears last in the CSS file will take precedence due to the "last rule wins" principle. */
+h1 {
+  color: red;
+}
+h1 {
+  color: green;
+}
+/* The reason the text inside the <p> tag is still blue is because inline styles have the highest specificity in CSS */
+p {
+  color: yellow;
+}
+#header {
+  color: blue;
+}
