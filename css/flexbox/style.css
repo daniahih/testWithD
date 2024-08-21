@@ -1,0 +1,111 @@
+/* BASE STYLES */
+:root {
+  --clr-dark: #0f172a;
+  --clr-light: #f1f5f9;
+  --clr-accent: #e11d48;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  word-spacing: 1.4px;
+  font-family: "Roboto", sans-serif;
+  color: var(--clr-dark);
+  background-color: var(--clr-light);
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  height: 700px;
+  margin: 0 auto;
+  border: 10px solid var(--clr-dark);
+}
+
+.item {
+  width: 150px;
+  height: 150px;
+  background-color: #fb7185;
+  padding: 1em;
+  font-weight: 700;
+  color: var(--clr-light);
+  text-align: center;
+  border: 10px solid var(--clr-accent);
+  border-radius: 10px;
+}
+
+/* END OF BASE STYLES */
+.container {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  /* justify-content: center;
+  justify-content: space-around;
+  justify-content: space-evenly;*/
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* align-items: end;
+  align-items: flex-start; */
+}
+
+.container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* align-items: end;
+  align-items: flex-start;*/
+}
+.container {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjusts spacing around items */
+}
+/* . Introduction to the flex Property:
+
+The flex property in CSS is a shorthand for three individual properties that control how a flex item behaves inside a flex container:
+flex-grow: Determines how much the item will grow relative to the other items when there’s extra space in the container.
+flex-shrink: Determines how much the item will shrink relative to the other items when there isn’t enough space in the container.
+flex-basis: Specifies the initial size of the item before any growing or shrinking takes place. */
+/* FLEX PROPERTIES FOR SPECIFIC ITEMS */
+.item-1 {
+  flex: 1; /* This item will grow and shrink equally relative to other items */
+}
+
+.item-2 {
+  flex: 6; /* This item will take up 6 times more space than .item-1 */
+}
+
+.item-3 {
+  flex: 2; /* This item will take up 2 times more space than .item-1 */
+}
+
+.item-4 {
+  flex-grow: 3; /* This item will grow 3 times more than other items */
+  flex-shrink: 1; /* This item will shrink proportionally when needed */
+  flex-basis: 150px; /* This is the starting size before growing or shrinking */
+}
+
+.item-5 {
+  flex-grow: 0; /* Prevents this item from growing */
+  flex-shrink: 0; /* Prevents this item from shrinking */
+  flex-basis: 200px; /* Fixes the size of this item to 200px */
+}
