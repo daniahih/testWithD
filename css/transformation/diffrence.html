@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translate vs. Margin</title>
+    <style>
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 50px;
+        border: 2px dashed #ccc; /* Visualize container boundaries */
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .blue-box {
+        background-color: blue;
+        transform: translateX(50px);
+        /* Move 50px to the right using translate */
+      }
+
+      .red-box {
+        background-color: red;
+        margin-left: 50px; /* Move 50px to the right using margin */
+      }
+
+      .green-box {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box blue-box">Translate</div>
+      <div class="box green-box">Green Box</div>
+      <div class="box red-box">Margin</div>
+      <div class="box green-box">Green Box</div>
+    </div>
+  </body>
+</html>

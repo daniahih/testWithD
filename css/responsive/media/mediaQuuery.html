@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Multi-Screen Layout</title>
+    <style>
+      /* Basic Styles for All Screens */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header,
+      nav,
+      main,
+      footer {
+        padding: 20px;
+        text-align: center;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      main {
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      aside {
+        background-color: #e2e2e2;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+      }
+
+      /* Mobile Styles (max-width: 599px) */
+      @media screen and (max-width: 599px) {
+        nav ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+        main {
+          display: block;
+        }
+        aside {
+          margin-top: 20px;
+          width: 90%;
+        }
+      }
+
+      /* Tablet Styles (min-width: 600px and max-width: 991px) */
+      @media screen and (min-width: 600px) and (max-width: 991px) {
+        nav ul li {
+          display: inline-block;
+          margin: 0 10px;
+        }
+
+        main {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        aside {
+          order: -1;
+          margin-top: 0;
+          width: 100%;
+        }
+        section {
+          width: 100%;
+        }
+      }
+
+      /* Desktop Styles (min-width: 992px) */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Responsive Layout</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h2>Main Content</h2>
+        <p>
+          This is the main content area. It will adjust based on the screen
+          size.
+        </p>
+      </section>
+      <aside>
+        <h3>Sidebar</h3>
+        <p>
+          This is the sidebar content. It will be repositioned based on the
+          screen size.
+        </p>
+      </aside>
+    </main>
+    <footer>
+      <p>Footer Content</p>
+    </footer>
+  </body>
+</html>

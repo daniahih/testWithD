@@ -1,0 +1,20 @@
+/* now the simple solution is to use max-width */
+.container {
+  /* width: 1100px; */
+  /* max-width: 1100px; */
+  /* use persentage  */
+  /* i can also use width and maz width  */
+  width: 80%;
+  max-width: 1100px;
+  /* i can use persentage for margin / padding: ; */
+  margin: 50px auto;
+  padding: 20px;
+}
+img {
+  max-width: 100%;
+}
+.with-max-width img {
+  max-width: 100%; /* Scales image down to fit its container */
+  height: auto; /* Maintains aspect ratio */
+  border: 2px solid green;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        perspective: 800px;
+        /* Controls the depth of the 3D effect */
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        font-size: 3rem;
+        text-align: center;
+        margin: 100px auto;
+        /* Transform: translateX(100px)
+   Moves the element 100px to the right along the X-axis. */
+
+        /* Transform: translateY(90px)
+   Moves the element 90px down along the Y-axis. */
+
+        /* Transform: translate(100px, 90px)
+   Moves the element 100px to the right and 90px down. This is a shorthand for combining translateX and translateY. */
+
+        /* Transform: translateX(500px) translateY(200px) translateZ(-300px)
+   Moves the element 500px to the right, 200px down, and -300px along the Z-axis (into the screen, creating depth). Requires perspective to see the Z-axis effect. */
+
+        /* Transform: rotate(180deg)
+   Rotates the element 180 degrees clockwise around the center of the element (in 2D space). */
+
+        /* Transform: rotateX(30deg)
+   Rotates the element 30 degrees around the X-axis (in 3D space). Requires perspective to see the effect properly. */
+
+        /* Transform: rotateY(180deg)
+   Rotates the element 180 degrees around the Y-axis (in 3D space). Useful for flipping an element horizontally. Requires perspective to see the effect properly. */
+
+        /* Transform: scale(2, 0.5)
+   Scales the element to 2 times its original width and reduces its height to half its original size. */
+
+        /* Transform: skew(45deg)
+   Skews the element 45 degrees along both the X and Y axes, creating a slanted effect. */
+
+        /* Transform: skewX(30deg)
+   Skews the element 30 degrees along the X-axis only, slanting the element horizontally. */
+
+        /* Transform: skewY(30deg)
+   Skews the element 30 degrees along the Y-axis only, slanting the element vertically. */
+
+        /* Transform: translate(200px, 100px) skew(40deg) scale(2, 0.5) rotate(15deg)
+   Combines multiple transformations:
+   - Moves the element 200px to the right and 100px down.
+   - Skews the element 40 degrees along both axes.
+   - Scales the element to 2 times its original width and reduces its height to half.
+   - Rotates the element 15 degrees clockwise.
+   This creates a complex transformation involving movement, slanting, resizing, and rotation. */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">Box1</div>
+  </body>
+</html>

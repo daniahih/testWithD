@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* transition: <property > | <duration>| <tining function >| <delay> */
+      .box1 {
+        width: 200px;
+        height: 200px;
+        margin: 200px auto;
+        background-color: blueviolet;
+        /* transition: all 2s; */
+        /* transition: width 2s, background-color 3s; */
+        /* transition-property: width, background-color;
+        transition-duration: 4000ms, 10s; */
+        transition: all 2s ease-in 2s;
+      }
+      .box1:hover {
+        width: 400px;
+        background-color: aquamarine;
+      }
+      div p {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        transition-property: width;
+        transition-duration: 3s;
+      }
+      /* div p:hover {
+        width: 200px;
+      } */
+      div p:first-of-type {
+        transition-timing-function: ease;
+        transition-delay: 2s; /* The transition will start after a 2-second delay */
+        /* The transition starts slowly, accelerates in the middle, and then slows down towards the end */
+      }
+
+      div p:nth-of-type(2) {
+        transition-timing-function: linear;
+        /* The transition proceeds at a constant speed from start to finish */
+      }
+
+      div p:nth-of-type(3) {
+        transition-timing-function: ease-in;
+        /* The transition starts slowly and then speeds up towards the end */
+      }
+
+      div p:nth-of-type(4) {
+        transition-timing-function: ease-out;
+        /* The transition starts quickly and then slows down towards the end */
+      }
+
+      div p:nth-of-type(5) {
+        transition-timing-function: ease-in-out;
+        /* The transition starts slowly, accelerates in the middle, and then slows down again towards the end */
+      }
+
+      div:hover p {
+        width: 200px; /* On hover, all <p> elements inside the div will change their width to 200px */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box1">Box 1</div>
+    <div>
+      <p>ease</p>
+      <p>Linear</p>
+      <p>ease-IN</p>
+      <p>ease-Out</p>
+      <p>ease-In-OUT</p>
+    </div>
+  </body>
+</html>

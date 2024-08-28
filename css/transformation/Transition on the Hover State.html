@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition on Hover State</title>
+    <style>
+      .box-hover {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+
+      .box-hover:hover {
+        background-color: blue;
+        transform: scale(1.5);
+        transition: background-color 1s ease, transform 1s ease; /* Transition only on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-hover"></div>
+  </body>
+</html>

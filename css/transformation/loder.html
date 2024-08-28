@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wave Text Animation</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #282c34;
+        color: #61dafb;
+        font-family: Arial, sans-serif;
+        font-size: 5rem;
+      }
+
+      .wave-text {
+        display: inline-block;
+      }
+
+      .wave-text span {
+        display: inline-block;
+        animation: wave 1.5s infinite ease-in-out;
+        animation-delay: calc(0.1s * var(--i));
+      }
+
+      @keyframes wave {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wave-text">
+      <span style="--i: 1">W</span>
+      <span style="--i: 2">A</span>
+      <span style="--i: 3">V</span>
+      <span style="--i: 4">E</span>
+      <span style="--i: 5"> </span>
+      <span style="--i: 6">T</span>
+      <span style="--i: 7">E</span>
+      <span style="--i: 8">X</span>
+      <span style="--i: 9">T</span>
+    </div>
+  </body>
+</html>
