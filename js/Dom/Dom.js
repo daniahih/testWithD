@@ -32,9 +32,6 @@ const newParagraph = document.createElement("p"); // Create a new paragraph elem
 newParagraph.textContent = "This is a dynamically added paragraph!";
 container.appendChild(newParagraph); // Append the new paragraph to the container
 
-// Question for students: What would happen if we used 'prepend' instead of 'appendChild'?
-// Answer: 'prepend' adds the element to the beginning of the container.
-
 // ----------------------------------------------------------------
 
 // STYLE ELEMENT
@@ -42,9 +39,6 @@ container.appendChild(newParagraph); // Append the new paragraph to the containe
 title.style.color = "blue"; // Change text color
 title.style.fontSize = "2em"; // Change font size
 newParagraph.style.backgroundColor = "lightgray"; // Add background color to the new paragraph
-
-// Question for students: How can you remove a style from an element?
-// Try: title.style.removeProperty('color');
 
 // using loop /
 
@@ -65,9 +59,6 @@ for (let i = 0; i < fruits.length; i++) {
   // Append the new li to the ul (fruit list)
   fruitList.appendChild(listItem);
 }
-
-// Question for students: What happens if we use 'innerHTML' to insert the list items instead of 'appendChild'?
-// Answer: It would replace all the previous content inside the 'ul' every time the loop runs.
 
 // ---------------------------------------------------------------- list of students
 // Initial list of students
@@ -109,9 +100,6 @@ const removeStudent = (index) => {
 
 // Add a new student directly through code (without user-triggered events)
 addStudent("Jessica"); // Adding a new student as an example
-
-// Question for students: How would you modify this to use event listeners?
-// What advantages do event listeners provide for user interaction?
 
 // Bonus Step: Toggle a class for styling
 title.classList.add("highlight"); // Add a class
