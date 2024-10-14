@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch API with Promises Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 50px;
+        text-align: center;
+      }
+      .user-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .user-card {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 10px;
+        width: 150px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fetch API with Promises: Display Users</h1>
+    <button id="fetchButton">Get Users</button>
+    <div id="userContainer" class="user-container"></div>
+
+    <script>
+      // Function to fetch user data using Promises and display it
+      function getUsers() {
+        fetch("https://jsonplaceholder.typicode.com/users")
+          .then((response) => {
+            if (response.status === 200) {
+              // Check if the request was successful
+              return response.json(); // Parse JSON if status is 200
+            } else {
+              throw new Error(`Failed to fetch data: ${response.status}`);
+            }
+          })
+          .then((users) => {
+            displayUsers(users); // Call the function to display users in the UI
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+
+      // Function to display the fetched users in the UI
+      function displayUsers(users) {
+        const userContainer = document.getElementById("userContainer");
+        userContainer.innerHTML = ""; // Clear the container
+
+        users.forEach((user) => {
+          // Create a card for each user
+          const userCard = document.createElement("div");
+          userCard.className = "user-card";
+          userCard.innerHTML = `
+          <h3>${user.name}</h3>
+          <p>Email: ${user.email}</p>
+          <p>City: ${user.address.city}</p>
+        `;
+          userContainer.appendChild(userCard); // Append the card to the container
+        });
+      }
+
+      // Add an event listener to the button to fetch and display data
+      document
+        .getElementById("fetchButton")
+        .addEventListener("click", getUsers);
+    </script>
+  </body>
+</html>
